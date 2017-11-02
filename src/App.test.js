@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import ReactTestUtils from "react-dom/test-utils";
 import ShallowRenderer from "react-test-renderer/shallow"; // ES6
 
-import { mount, configure } from "enzyme";
+import { mount, configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new Adapter() });
@@ -48,4 +48,12 @@ it("enzyme: simulate click", () => {
   const element = mount(<App onClick={mockFunction} />);
   element.find("button").simulate("click");
   expect(mockFunction).toHaveBeenCalled();
+});
+
+it("matches the snapshot", () => {
+  const mockFunction = jest.fn();
+  const wrapper = shallow(<App onClick={mockFunction} />);
+  // Snapshot serializer will call toJson automatically
+  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.prop("style")).toMatchSnapshot();
 });

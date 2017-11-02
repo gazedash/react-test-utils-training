@@ -22,6 +22,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <button onClick={this.handleClick} />
+        <div onClick={() => console.log('new function, right?')} />
       </div>
     );
   }
