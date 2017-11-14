@@ -19,6 +19,9 @@ var request2 = nock("https://localhost:80/some/other")
 const fetchSomeMore = api.fetchSomeMore;
 api.fetchSomeMore = jest.fn(() => fetchSomeMore());
 
+// This is Stub:
+// const utils.fetchSomeMore = jest.fn(() => { response: "<body></body>"});
+
 it("function1 calls function 2", async () => {
   console.error = jest.fn();
   const params = { id: 8 };
