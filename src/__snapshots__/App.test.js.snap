@@ -1,48 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches the snapshot 1`] = `
-<div
-  className="App"
-  style={
+<Provider
+  store={
     Object {
-      "background": "grey",
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
   }
 >
-  <header
-    className="App-header"
-  >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.svg"
-    />
-    <h1
-      className="App-title"
-    >
-      Welcome to React
-    </h1>
-  </header>
-  <p
-    className="App-intro"
-  >
-    To get started, edit 
-    <code>
-      src/App.js
-    </code>
-     and save to reload.
-  </p>
-  <button
+  <App
     onClick={[Function]}
   />
-  <div
-    onClick={[Function]}
-  />
-</div>
+</Provider>
 `;
 
-exports[`matches the snapshot 2`] = `
-Object {
-  "background": "grey",
-}
-`;
+exports[`matches the snapshot 2`] = `undefined`;

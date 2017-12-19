@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
+import FollowersSuggestion from "./containers/followersSuggestion"
 import "./App.css";
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div style={{ background: this.state.background }} className="App">
+      <div id="ddd" style={{ background: this.state.background }} className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
@@ -23,6 +24,7 @@ class App extends Component {
         </p>
         <button onClick={this.handleClick} />
         <div onClick={() => console.log('new function, right?')} />
+        <FollowersSuggestion />
       </div>
     );
   }
